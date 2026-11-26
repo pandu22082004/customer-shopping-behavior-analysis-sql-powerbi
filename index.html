@@ -1,8 +1,6 @@
  <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Customer Shopping Behavior Analysis</title>
 
 <style>
@@ -10,7 +8,6 @@
 body{
 font-family:Arial,sans-serif;
 background:#f4f6f9;
-margin:0;
 padding:30px;
 }
 
@@ -19,47 +16,33 @@ text-align:center;
 color:#1f4e8c;
 }
 
-.subtitle{
+.buttons{
 text-align:center;
-font-size:20px;
-color:#555;
-margin-bottom:30px;
+margin:30px;
 }
 
-.section{
+button{
+background:#1f4e8c;
+color:white;
+border:none;
+padding:12px 25px;
+margin:10px;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#14396d;
+}
+
+.content{
+display:none;
 background:white;
 padding:25px;
-margin-bottom:20px;
+margin-top:20px;
 border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#eef3fa;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-.card h3{
-color:#1f4e8c;
-}
-
-.metric{
-font-size:30px;
-font-weight:bold;
-color:green;
-}
-
-img{
-width:100%;
-border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
 table{
@@ -70,7 +53,6 @@ border-collapse:collapse;
 th,td{
 border:1px solid #ccc;
 padding:10px;
-text-align:left;
 }
 
 th{
@@ -79,87 +61,72 @@ color:white;
 }
 
 </style>
+
+<script>
+
+function showSection(id){
+
+document.getElementById("dashboard").style.display="none";
+document.getElementById("sql").style.display="none";
+document.getElementById("findings").style.display="none";
+
+document.getElementById(id).style.display="block";
+
+}
+
+</script>
+
 </head>
 
 <body>
 
 <h1>Customer Shopping Behavior Analysis</h1>
 
-<p class="subtitle">
-SQL Server | Power BI | Data Analytics
-</p>
+<div class="buttons">
 
-<div class="section">
+<button onclick="showSection('dashboard')">
+📈 Dashboard
+</button>
 
-<h2>📊 Project Overview</h2>
+<button onclick="showSection('sql')">
+📊 SQL Analysis
+</button>
 
-<p>
-This project analyzes customer purchase behavior using SQL Server and Power BI.
-The objective was to identify customer segments, revenue trends,
-product performance, and seasonal sales patterns.
-</p>
+<button onclick="showSection('findings')">
+💡 Key Findings
+</button>
 
 </div>
 
-<div class="section">
+<!-- Dashboard -->
 
-<h2>🛠 Tools Used</h2>
+<div id="dashboard" class="content">
+
+<h2>📈 Dashboard KPIs</h2>
 
 <ul>
-<li>SQL Server</li>
-<li>Power BI</li>
-<li>Excel</li>
-<li>Data Cleaning</li>
-<li>Data Visualization</li>
+<li>Total Revenue: ₹230.63K</li>
+<li>Total Customers: 3863</li>
+<li>Average Purchase Amount: ₹59.70</li>
+<li>Average Review Rating: 3.75</li>
+</ul>
+
+<h3>Dashboard Insights</h3>
+
+<ul>
+<li>Clothing generated the highest revenue.</li>
+<li>Senior customers spent the most.</li>
+<li>Blouse, Shirt and Dress were top products.</li>
+<li>Fall season recorded the highest sales.</li>
 </ul>
 
 </div>
 
-<div class="section">
+<!-- SQL -->
 
-<h2>📈 Dashboard KPIs</h2>
+<div id="sql" class="content">
 
-<div class="card-container">
-
-<div class="card">
-<h3>Total Revenue</h3>
-<div class="metric">₹230.63K</div>
-</div>
-
-<div class="card">
-<h3>Total Customers</h3>
-<div class="metric">3863</div>
-</div>
-
-<div class="card">
-<h3>Average Rating</h3>
-<div class="metric">3.75</div>
-</div>
-
-<div class="card">
-<h3>Average Purchase</h3>
-<div class="metric">₹59.70</div>
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>📊 Power BI Dashboard</h2>
-
-<p>
-Upload your screenshot as <b>dashboard.png</b> and it will appear below:
-</p>
-
-<img src="dashboard.png" alt="Power BI Dashboard">
-
-</div>
-
-<div class="section">
-
-<h2>📋 SQL Analysis Results</h2>
+<h2>📊 SQL Analysis Results</h2>
 
 <table>
 
@@ -199,7 +166,7 @@ Upload your screenshot as <b>dashboard.png</b> and it will appear below:
 </tr>
 
 <tr>
-<td>Top Location</td>
+<td>Top State</td>
 <td>Montana ($5,717)</td>
 </tr>
 
@@ -207,35 +174,30 @@ Upload your screenshot as <b>dashboard.png</b> and it will appear below:
 
 </div>
 
-<div class="section">
+<!-- Findings -->
+
+<div id="findings" class="content">
 
 <h2>💡 Key Findings</h2>
 
 <ul>
-<li>Clothing generated the highest revenue ($102,968).</li>
-<li>Total revenue reached ₹230.63K.</li>
-<li>Senior customers (56+) spent the most.</li>
-<li>Fall season recorded the highest sales.</li>
-<li>Blouse, Shirt and Dress were top-performing products.</li>
-<li>Average Purchase Amount was ₹59.70.</li>
-<li>Average Review Rating was 3.75/5.</li>
-<li>Montana generated the highest revenue.</li>
-</ul>
 
-</div>
+<li>Total Revenue: ₹230.63K</li>
 
-<div class="section">
+<li>Total Customers: 3863</li>
 
-<h2>✅ Skills Demonstrated</h2>
+<li>Clothing generated the highest revenue.</li>
 
-<ul>
-<li>SQL Queries</li>
-<li>Data Cleaning</li>
-<li>Revenue Analysis</li>
-<li>Customer Segmentation</li>
-<li>Power BI Dashboard Development</li>
-<li>Data Visualization</li>
-<li>Business Intelligence</li>
+<li>Senior customers spent the most.</li>
+
+<li>Winter recorded strong sales performance.</li>
+
+<li>Blouse, Shirt and Dress were top revenue-generating products.</li>
+
+<li>Average Purchase Amount: ₹59.70</li>
+
+<li>Average Review Rating: 3.75/5</li>
+
 </ul>
 
 </div>
