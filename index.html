@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,11 +6,12 @@
 <title>Customer Shopping Behavior Analysis</title>
 
 <style>
+
 body{
 font-family:Arial,sans-serif;
 background:#f4f6f9;
-padding:40px;
 margin:0;
+padding:30px;
 }
 
 h1{
@@ -18,64 +19,224 @@ text-align:center;
 color:#1f4e8c;
 }
 
-p{
+.subtitle{
 text-align:center;
-color:#666;
+font-size:20px;
+color:#555;
+margin-bottom:30px;
 }
 
-.container{
-display:flex;
-justify-content:center;
+.section{
+background:white;
+padding:25px;
+margin-bottom:20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-flex-wrap:wrap;
-margin-top:40px;
 }
 
 .card{
-background:white;
-width:300px;
+background:#eef3fa;
 padding:20px;
-border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,.1);
+border-radius:10px;
 text-align:center;
 }
 
-.btn{
-display:inline-block;
-margin-top:15px;
-padding:10px 20px;
+.card h3{
+color:#1f4e8c;
+}
+
+.metric{
+font-size:30px;
+font-weight:bold;
+color:green;
+}
+
+img{
+width:100%;
+border-radius:10px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid #ccc;
+padding:10px;
+text-align:left;
+}
+
+th{
 background:#1f4e8c;
 color:white;
-text-decoration:none;
-border-radius:8px;
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
 <h1>Customer Shopping Behavior Analysis</h1>
-<p>SQL Server | Power BI | Data Analytics</p>
 
-<div class="container">
+<p class="subtitle">
+SQL Server | Power BI | Data Analytics
+</p>
+
+<div class="section">
+
+<h2>📊 Project Overview</h2>
+
+<p>
+This project analyzes customer purchase behavior using SQL Server and Power BI.
+The objective was to identify customer segments, revenue trends,
+product performance, and seasonal sales patterns.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>🛠 Tools Used</h2>
+
+<ul>
+<li>SQL Server</li>
+<li>Power BI</li>
+<li>Excel</li>
+<li>Data Cleaning</li>
+<li>Data Visualization</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>📈 Dashboard KPIs</h2>
+
+<div class="card-container">
 
 <div class="card">
-<h2>📊 SQL Analysis</h2>
-<p>Revenue, Category, Age Group and Location Analysis.</p>
-<a class="btn" href="sql-analysis.html">View Details</a>
+<h3>Total Revenue</h3>
+<div class="metric">₹230.63K</div>
 </div>
 
 <div class="card">
-<h2>📈 Power BI Dashboard</h2>
-<p>Interactive dashboard insights and KPIs.</p>
-<a class="btn" href="powerbi.html">View Dashboard</a>
+<h3>Total Customers</h3>
+<div class="metric">3863</div>
 </div>
 
 <div class="card">
+<h3>Average Rating</h3>
+<div class="metric">3.75</div>
+</div>
+
+<div class="card">
+<h3>Average Purchase</h3>
+<div class="metric">₹59.70</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>📊 Power BI Dashboard</h2>
+
+<p>
+Upload your screenshot as <b>dashboard.png</b> and it will appear below:
+</p>
+
+<img src="dashboard.png" alt="Power BI Dashboard">
+
+</div>
+
+<div class="section">
+
+<h2>📋 SQL Analysis Results</h2>
+
+<table>
+
+<tr>
+<th>Analysis</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>Top Category</td>
+<td>Clothing ($102,968)</td>
+</tr>
+
+<tr>
+<td>Accessories Revenue</td>
+<td>$73,480</td>
+</tr>
+
+<tr>
+<td>Footwear Revenue</td>
+<td>$35,778</td>
+</tr>
+
+<tr>
+<td>Outerwear Revenue</td>
+<td>$18,403</td>
+</tr>
+
+<tr>
+<td>Top Age Group</td>
+<td>56+ ($64,560)</td>
+</tr>
+
+<tr>
+<td>Top Season</td>
+<td>Fall ($59,620)</td>
+</tr>
+
+<tr>
+<td>Top Location</td>
+<td>Montana ($5,717)</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
 <h2>💡 Key Findings</h2>
-<p>Main business insights from the analysis.</p>
-<a class="btn" href="findings.html">View Insights</a>
+
+<ul>
+<li>Clothing generated the highest revenue ($102,968).</li>
+<li>Total revenue reached ₹230.63K.</li>
+<li>Senior customers (56+) spent the most.</li>
+<li>Fall season recorded the highest sales.</li>
+<li>Blouse, Shirt and Dress were top-performing products.</li>
+<li>Average Purchase Amount was ₹59.70.</li>
+<li>Average Review Rating was 3.75/5.</li>
+<li>Montana generated the highest revenue.</li>
+</ul>
+
 </div>
+
+<div class="section">
+
+<h2>✅ Skills Demonstrated</h2>
+
+<ul>
+<li>SQL Queries</li>
+<li>Data Cleaning</li>
+<li>Revenue Analysis</li>
+<li>Customer Segmentation</li>
+<li>Power BI Dashboard Development</li>
+<li>Data Visualization</li>
+<li>Business Intelligence</li>
+</ul>
 
 </div>
 
