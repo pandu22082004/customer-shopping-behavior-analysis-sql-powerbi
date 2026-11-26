@@ -1,63 +1,80 @@
  <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Customer Shopping Behavior Analysis</title>
 
 <style>
 
 body{
-font-family:Arial,sans-serif;
-background:#f4f6f9;
-padding:30px;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
 }
 
-h1{
-text-align:center;
-color:#1f4e8c;
+.header{
+    background:#e9edf3;
+    padding:40px;
+    text-align:center;
+}
+
+.header h1{
+    color:#1f4e8c;
+    font-size:48px;
 }
 
 .buttons{
-text-align:center;
-margin:30px;
+    margin-top:30px;
 }
 
 button{
-background:#1f4e8c;
-color:white;
-border:none;
-padding:12px 25px;
-margin:10px;
-border-radius:8px;
-cursor:pointer;
-font-size:16px;
+    background:#1f4e8c;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    margin:10px;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
 }
 
 button:hover{
-background:#14396d;
+    background:#16396b;
 }
 
 .content{
-display:none;
-background:white;
-padding:25px;
-margin-top:20px;
-border-radius:15px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    display:none;
+    background:white;
+    max-width:1200px;
+    margin:30px auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+img{
+    width:100%;
+    border-radius:10px;
 }
 
 table{
-width:100%;
-border-collapse:collapse;
+    width:100%;
+    border-collapse:collapse;
 }
 
 th,td{
-border:1px solid #ccc;
-padding:10px;
+    border:1px solid #ddd;
+    padding:12px;
 }
 
 th{
-background:#1f4e8c;
-color:white;
+    background:#1f4e8c;
+    color:white;
+}
+
+ul{
+    line-height:2;
 }
 
 </style>
@@ -74,11 +91,17 @@ document.getElementById(id).style.display="block";
 
 }
 
+window.onload=function(){
+showSection('dashboard');
+}
+
 </script>
 
 </head>
 
 <body>
+
+<div class="header">
 
 <h1>Customer Shopping Behavior Analysis</h1>
 
@@ -98,30 +121,19 @@ document.getElementById(id).style.display="block";
 
 </div>
 
-<!-- Dashboard -->
+</div>
 
- <div id="dashboard" class="content">
+<!-- DASHBOARD -->
+
+<div id="dashboard" class="content">
 
 <h2>📈 Power BI Dashboard</h2>
 
-<img src="dashboard.png"
-     alt="Power BI Dashboard"
-     style="width:100%; border-radius:10px;">
+<img src="dashboard.png" alt="Power BI Dashboard">
 
 </div>
 
-<h3>Dashboard Insights</h3>
-
-<ul>
-<li>Clothing generated the highest revenue.</li>
-<li>Senior customers spent the most.</li>
-<li>Blouse, Shirt and Dress were top products.</li>
-<li>Fall season recorded the highest sales.</li>
-</ul>
-
-</div>
-
-<!-- SQL -->
+<!-- SQL ANALYSIS -->
 
 <div id="sql" class="content">
 
@@ -173,7 +185,7 @@ document.getElementById(id).style.display="block";
 
 </div>
 
-<!-- Findings -->
+<!-- KEY FINDINGS -->
 
 <div id="findings" class="content">
 
@@ -185,17 +197,19 @@ document.getElementById(id).style.display="block";
 
 <li>Total Customers: 3863</li>
 
-<li>Clothing generated the highest revenue.</li>
-
-<li>Senior customers spent the most.</li>
-
-<li>Winter recorded strong sales performance.</li>
-
-<li>Blouse, Shirt and Dress were top revenue-generating products.</li>
-
 <li>Average Purchase Amount: ₹59.70</li>
 
-<li>Average Review Rating: 3.75/5</li>
+<li>Average Review Rating: 3.75</li>
+
+<li>Clothing generated the highest revenue.</li>
+
+<li>Senior customers (56+) generated the most revenue.</li>
+
+<li>Fall season recorded the highest sales.</li>
+
+<li>Montana generated the highest revenue.</li>
+
+<li>Blouse, Shirt and Dress were top-performing products.</li>
 
 </ul>
 
